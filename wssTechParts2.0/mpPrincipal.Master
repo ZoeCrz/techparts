@@ -1,0 +1,205 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="mpPrincipal.master.cs" Inherits="wssTechParts2._0.mpPrincipal" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="FOTOS/iconoTP.png">
+	<!-- Author Meta -->
+	<meta name="author" content="CodePixar">
+	<!-- Meta Description -->
+	<meta name="description" content="">
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="">
+	<!-- meta character set -->
+	<meta charset="UTF-8">
+	<!-- Site Title -->
+	<title>TechParts</title>
+	<!--
+		CSS
+		============================================= -->
+	<link rel="stylesheet" href="Plantilla/css/linearicons.css">
+	<link rel="stylesheet" href="Plantilla/css/font-awesome.min.css">
+	<link rel="stylesheet" href="Plantilla/css/themify-icons.css">
+	<link rel="stylesheet" href="Plantilla/css/bootstrap.css">
+	<link rel="stylesheet" href="Plantilla/css/owl.carousel.css">
+	<link rel="stylesheet" href="Plantilla/css/nice-select.css">
+	<link rel="stylesheet" href="Plantilla/css/nouislider.min.css">
+	<link rel="stylesheet" href="Plantilla/css/ion.rangeSlider.css" />
+	<link rel="stylesheet" href="Plantilla/css/ion.rangeSlider.skinFlat.css" />
+	<link rel="stylesheet" href="Plantilla/css/magnific-popup.css">
+	<link rel="stylesheet" href="Plantilla/css/main.css">
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+
+    <form id="form1" runat="server">
+
+
+		<!-- Start Header Area -->
+		<header class="header_area sticky-header">
+			<div class="main_menu">
+				<nav class="navbar navbar-expand-lg navbar-light main_box">
+					<div class="container">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<a class="navbar-brand logo_h" href="frmPrincipal.aspx"><img src="FOTOS/logoTP.png" height="50" alt=""></a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+						 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+							<ul class="nav navbar-nav menu_nav ml-auto">
+								<li class="nav-item active"><a class="nav-link" href="frmPrincipal.aspx">Inicio</a></li>
+								<li class="nav-item active"><a class="nav-link" href="frmProductos.aspx">Catálogo</a></li>
+								<li class="nav-item active"><a class="nav-link" href="frmPromociones.aspx">Promociones</a></li>
+								<li class="nav-item submenu dropdown">
+									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+									 aria-expanded="false">Acerca de</a>
+									<ul class="dropdown-menu">
+										<li class="nav-item"><a class="nav-link" href="frmContacto.aspx">Contacto</a></li>
+										<li class="nav-item"><a class="nav-link" href="frmHistoria.aspx">Historia</a></li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="nav navbar-nav navbar-right">
+								<li class="nav-item"><a href="frmIniciarSesion.aspx"><span class="ti-user"></span></a></li>
+								<li class="nav-item"><a href="frmIniciarSesion.aspx" class="cart"><span class="ti-bag"></span></a></li>
+								<li class="nav-item d-flex align-items-center">
+									<a href="javascript:void(0);" class="nav-link search" id="search"><span class="lnr lnr-magnifier"></span></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</div>
+			<div class="search_input" id="search_input_box" style="display: none;">
+				<div class="container">
+					<div class="d-flex justify-content-between align-items-center">
+						<input type="text" class="form-control" id="search_input" placeholder="Busca aquí...">
+						<span class="lnr lnr-cross" id="close_search" title="Cerrar"></span>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- End Header Area -->
+
+
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+
+		<!-- start footer Area -->
+		<footer class="footer-area section_gap">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3  col-md-6 col-sm-6">
+						<div class="single-footer-widget">
+							<h6>Acerca de nosotros</h6>
+							<p>
+								En TechParts nos apasiona la tecnología. Ofrecemos una experiencia de
+								compra confiable y personalizada para que cada usuario pueda armar su PC
+								a su manera, con los mejores componentes y al mejor precio.
+							</p>
+						</div>
+					</div>
+					<div class="col-lg-4  col-md-6 col-sm-6">
+						<div class="single-footer-widget">
+							<h6>Boletín informativo</h6>
+							<p>Mantente actualizado de nuestros productos</p>
+							<div class="" id="mc_embed_signup">
+
+								<div target="_blank" novalidate="true"
+								 method="get">
+
+									<div class="d-flex flex-row">
+
+										<asp:TextBox ID="txtEmail" class="custom-control" name="EMAIL" placeholder="Ingresa tu Email" onblur="this.placeholder = 'Ingresa tu Email'" type="email" runat="server"></asp:TextBox>
+
+										<button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+										<div style="position: absolute; left: -5000px;">
+											<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+										</div>
+
+										<!-- <div class="col-lg-4 col-md-4">
+													<button class="bb-btn btn"><span class="lnr lnr-arrow-right"></span></button>
+												</div>  -->
+									</div>
+									<div class="info"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3  col-md-6 col-sm-6">
+						<div class="single-footer-widget mail-chimp">
+							<h6 class="mb-20">Nuestras sucursales</h6>
+							<ul class="d-flex flex-wrap justify-content-between">
+								<li><img src="FOTOS/sucMallTP.png" alt="" width="120"></li>
+								<li><img src="FOTOS/sucStreetTP.png" alt="" width="120"></li>
+							</ul>
+							<p><br />
+								<a><i class="fa fa-location-arrow"></i> Camino Real de La Plata 102, Zona Plateada, 42083 Pachuca de Soto, Hgo.</a><br />
+								<a><i class="fa fa-location-arrow"></i> Ex Hacienda San Javier, Tolcayuca 1009, 43860 Tolcayuca, Hgo.</a><br />
+							</p>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-6 col-sm-6">
+						<div class="single-footer-widget">
+							<h6>Síguenos</h6>
+							<div class="footer-social d-flex align-items-center">
+								<a href="#"><i class="fa fa-facebook"></i></a>
+								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="#"><i class="fa fa-instagram"></i></a>
+								<a href="#"><i class="fa fa-whatsapp"></i></a>
+							</div>
+							<p>Nuestros números de contacto:<br />
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap">
+					<p class="footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	TechParts &copy;<script>document.write(new Date().getFullYear());</script> <i class="fa fa-heart-o" aria-hidden="true"></i>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	</p>
+				</div>
+			</div>
+		</footer>
+		<!-- End footer Area -->
+
+
+    </form>
+
+	<script src="Plantilla/js/vendor/jquery-2.2.4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+	 crossorigin="anonymous"></script>
+	<script src="Plantilla/js/vendor/bootstrap.min.js"></script>
+	<script src="Plantilla/js/jquery.ajaxchimp.min.js"></script>
+	<script src="Plantilla/js/jquery.nice-select.min.js"></script>
+	<script src="Plantilla/js/jquery.sticky.js"></script>
+	<script src="Plantilla/js/nouislider.min.js"></script>
+	<script src="Plantilla/js/countdown.js"></script>
+	<script src="Plantilla/js/jquery.magnific-popup.min.js"></script>
+	<script src="Plantilla/js/owl.carousel.min.js"></script>
+	<!--gmaps Js-->
+	<!-- Google Maps disabled in the public copy; configure your own restricted browser key if needed. -->
+	<script src="Plantilla/js/gmaps.min.js"></script>
+	<script src="Plantilla/js/main.js"></script>
+
+</body>
+</html>
