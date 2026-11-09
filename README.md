@@ -47,7 +47,7 @@ El botón de contacto está desactivado hasta configurar `ContactPhone` en appSe
 - Sin usuarios, fotos de perfiles, API keys ni cadenas de conexión reales de la carpeta original.
 
 ## Validación y límites
-Los contratos entre llamadas C# y procedimientos se revisan estáticamente. Se incluye `.github/workflows/verify.yml` para compilar en Windows y ejecutar el esquema y pruebas del carrito en MySQL. Una versión anterior compiló en Windows remoto y pasó las pruebas de MySQL. Queda por ejecutar el workflow sobre esta revisión con `demo_visual.sql` para comprobar la carga nueva y las pruebas del carrito.
+Los contratos entre llamadas C# y procedimientos se revisan estáticamente. Se incluye `.github/workflows/verify.yml` para compilar en Windows y ejecutar el esquema y pruebas del carrito en MySQL. La [verificación de la demo](https://github.com/ZoeCrz/techparts/actions/runs/42544261889) compiló en Windows y ejecutó en MySQL la creación de la base, la carga de `demo_visual.sql` y las pruebas del carrito. La prueba interactiva de la interfaz en IIS Express queda pendiente.
 
 Antes de exponer una instancia a internet faltan revisión completa de salidas HTML/URL, control de intentos de acceso, regeneración de sesión tras login, pruebas de autorización y concurrencia, y revisión de dependencias. El carrito libera conexiones, comandos y adaptadores con `using`, muestra totales con `decimal` y verifica el resultado de la operación antes de anunciar que agregó el producto. En otros módulos queda código legado por migrar. Estas mejoras no requieren cambiar de tecnología.
 
